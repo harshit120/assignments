@@ -1,10 +1,11 @@
 import './App.css';
-import FetchData from './containers/FetchData';
+
+import Carddd from './containers/Carddd';
 
 function App() {
 
   return (
-    <FetchData/>
+    <Carddd/>
   )
    
   

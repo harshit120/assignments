@@ -9,7 +9,6 @@ const Carddd = () => {
       <thead>
         <tr>
           <th>Subject</th>
-         
           <th>Division 1</th>
           <th>Division 2</th>
           <th>Division 3</th>
@@ -18,8 +17,8 @@ const Carddd = () => {
         </tr>
       </thead>
       <tbody>
-        {subjectss.map((subjects, index) => (
-          <TableRow key={index} subject={subjects} />
+        {subjects.map((subject, index) => (
+          <TableRow key={index} subject={subject} />
         ))}
       </tbody>
     </table>
