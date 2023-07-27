@@ -1,9 +1,10 @@
-import React,{useCallback} from "react";
+import React,{useCallback,useState} from "react";
 
 export const TableRow = React.memo(({ subject }) => {
+  const [id ,setid]=useState(0);
   const calculateStatus = useCallback((subject) => {
     // Check if all divisions are "True"
-   // console.log(subject);
+    //console.log("hello");
     const allTrue = Object.values(subject).every((value) => value === "True" || value === "true");
 
     // let a = 0;
@@ -14,7 +15,12 @@ export const TableRow = React.memo(({ subject }) => {
     //   }
     // }
     return allTrue === true ? "Submitted" : "Not Submittted";
-  }, []);
+  }, [subject]);
+// const increse =()=>{
+// setid(1);
+// console.log("hii")
+// }
+
     const status = calculateStatus(subject.division);
 
     return (
@@ -24,6 +30,7 @@ export const TableRow = React.memo(({ subject }) => {
         <td>{subject.division.division2}</td>
         <td>{subject.division.division3}</td>
         <td>{subject.division.division4}</td>
+        {/* <button onClick={increse }>hello</button> */}
         <td>{status}</td>
       </tr>
     );
