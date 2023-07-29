@@ -19,7 +19,7 @@ export const classes =[
             } ,
         },
         subject3:{
-            name: "Mathematics",
+            name: "Maths",
             division :{
               division1: "True",
               division2: "False",
@@ -37,7 +37,7 @@ export const classes =[
              } ,
         },
         subject5:{
-            name: "Social Science",
+            name: "Social ",
     division :{
       division1: "True",
       division2: "True",
