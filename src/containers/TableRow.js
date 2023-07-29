@@ -1,37 +1,25 @@
 import React,{useCallback,useState} from "react";
+import './style.css'
 
 export const TableRow = React.memo(({ subject }) => {
   const [id ,setid]=useState(0);
   const calculateStatus = useCallback((subject) => {
-    // Check if all divisions are "True"
-    //console.log("hello");
-    const allTrue = Object.values(subject).every((value) => value === "True" || value === "true");
 
-    // let a = 0;
-    // for (let i = 1; i <= 4; i++) {
-    //   let b = "division" + i;
-    //   if (subject[b] === "True" || subject[b] === "true") {
-    //     a++;
-    //   }
-    // }
+    const allTrue = Object.values(subject).every((value) => value === "True" || value === "true");
     return allTrue === true ? "Submitted" : "Not Submittted";
   }, [subject]);
-// const increse =()=>{
-// setid(1);
-// console.log("hii")
-// }
 
     const status = calculateStatus(subject.division);
 
     return (
-      <tr>
-        <td>{subject.name}</td>
-        <td>{subject.division.division1}</td>
-        <td>{subject.division.division2}</td>
-        <td>{subject.division.division3}</td>
-        <td>{subject.division.division4}</td>
+      <tr className=" row5 ">
+        <th className="">{subject.name}</th>
+        <th className="">{subject.division.division1}</th>
+        <th className="">{subject.division.division2}</th>
+        <th className="">{subject.division.division3}</th>
+        <th className="">{subject.division.division4}</th>
         {/* <button onClick={increse }>hello</button> */}
-        <td>{status}</td>
+        <th className=" row6">{status}</th>
       </tr>
     );
   });
