@@ -4,6 +4,11 @@ import "./style.css";
 import { TableRow } from "./TableRow";
 import { classes } from "./Data2";
 const Carddd = () => {
+
+  const squaretick=<svg xmlns="http://www.w3.org/2000/svg" width="26" height="25" viewBox="0 0 26 25" fill="none">
+  <path d="M5.53224 11.9479L5.53194 11.9476C5.38124 11.8011 5.17685 11.7188 4.96373 11.7188C4.75061 11.7188 4.54622 11.8011 4.39552 11.9476C4.24482 12.0941 4.16016 12.2928 4.16016 12.5C4.16016 12.5125 4.16047 12.525 4.16108 12.5375C4.17068 12.7315 4.25426 12.9151 4.39552 13.0524L4.39582 13.0527L10.0205 18.5212C10.3343 18.8263 10.8431 18.8263 11.1569 18.5212L22.4069 7.58368C22.5576 7.43716 22.6423 7.23845 22.6423 7.03125C22.6423 6.82405 22.5576 6.62534 22.4069 6.47882C22.2562 6.33231 22.0518 6.25 21.8387 6.25C21.6256 6.25 21.4212 6.33231 21.2705 6.47882L10.5887 16.8639L5.53224 11.9479Z" fill="#1C1C1C"/>
+</svg>
+
   const cricletick = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -59,12 +64,12 @@ const Carddd = () => {
         <div className="card">
           <thead className="">
             <tr className="rowtr">
-              <th></th>
+              <th className="rowtick"> {squaretick}</th>
               <th className="rowthead">class{index + 1}</th>
               <th className="rowthead1">{cricletick}</th>
               <th className="rowthead1">{cricletick}</th>
               <th className="rowthead1">{cricletick}</th>
-              <th className="rowthead1">{cricletick}</th>
+              <th className="rowthead2">{cricletick}</th>
               <th className="rowstatus"> Decleared</th>
               <th className="rowarrow"> {downArrow(index)}</th>
             </tr>
